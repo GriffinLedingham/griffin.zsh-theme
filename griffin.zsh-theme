@@ -1,16 +1,10 @@
 # griffin.zsh-theme (modified version of af-magic theme by andyfleming)
 
-if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
-local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
-
 # primary prompt
-PROMPT='$FG[236]${(l.COLUMNS...)}%{$reset_color%}
-$FG[141]%n\
+PROMPT='$FG[141]%n\
 $(git_prompt_info)$(hg_prompt_info)\
-$FG[039]%~\
+$FG[039]%~
 $FG[253]%(!.#.$)%{$reset_color%} '
-PROMPT2='%{$fg[red]%}\ %{$reset_color%}'
-RPS1='${return_code}'
 
 # color vars
 eval my_gray='$FG[141]'
